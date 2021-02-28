@@ -22,10 +22,19 @@ export default class ProductDetails extends BaseController {
             }
 
             const product = await dataService.getProductDetails(id);
+
+            let idUser = null;
+
             if (product != null) {
-                const { userId } = await dataService.getUser();
-                this.element.innerHTML = await productDetails(product, userId);
-                if (product.userId == userId) {
+                const user = await dataService.getUser();
+                console.log(user)
+                if (user != null) {
+                    idUser = user.userId;
+                }
+
+                this.element.innerHTML = await productDetails(product, idUser);
+                console.log(product.userId, idUser)
+                if (product.userId == idUser) {
                     const deleteModal = document.querySelector('.deleteModal');
 
                     deleteModal.innerHTML = '';
@@ -100,6 +109,7 @@ export default class ProductDetails extends BaseController {
 
 
         } catch (error) {
+            console.log(error)
             this.publish(this.events.ERROR, error);
         } finally {
             this.publish(this.events.FINISH_LOADING);
