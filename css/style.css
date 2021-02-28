@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.lds-ring, .global-errors {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(194, 192, 192, 0.2); /* Black w/ opacity */
+}
+
+.hidden{
+    display: none;
+}
+
+.global-errors {
+    padding: 20% 10%;
+  }

@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "username": "Lorenzo",
+      "password": "$2b$10$xuF8eF5/8kxzz5Adh/xIyOG480.HT9cq3kScn7V67nx7PeLNDsMZ.",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "name": "Tomate",
+      "price": "1",
+      "sellBuy": "Selling",
+      "description": "Un tomate rojo como un tomate, bastante buena pinta no te voy a mentir",
+      "tags": [
+        "Food"
+      ],
+      "image": "http://127.0.0.1:8000//file-1614541552346.jpg",
+      "userId": 1,
+      "updatedAt": "2021-02-28T19:45:52.358Z",
+      "id": 1
+    },
+    {
+      "name": "Cpu",
+      "price": "70",
+      "sellBuy": "Selling",
+      "description": "CPu un poco vieja pero bueno no esta mal",
+      "tags": [
+        "Tech"
+      ],
+      "image": "http://127.0.0.1:8000//file-1614541594833.jpg",
+      "userId": 1,
+      "updatedAt": "2021-02-28T19:46:34.839Z",
+      "id": 2
+    },
+    {
+      "name": "Chándal",
+      "price": "20",
+      "sellBuy": "Buying",
+      "description": "Busco chándal que me ayude a hacer deporte y llevar una alimentación saludable",
+      "tags": [
+        "Food",
+        "Sports"
+      ],
+      "image": "http://127.0.0.1:8000//file-1614541667876.png",
+      "userId": 1,
+      "updatedAt": "2021-02-28T19:47:47.889Z",
+      "id": 3
+    },
+    {
+      "name": "Libro para aprender Coreano",
+      "price": "30",
+      "sellBuy": "Buying",
+      "description": "Busco libro \"Vitamin\"  como el de la foto.",
+      "tags": [
+        "Other"
+      ],
+      "image": "http://127.0.0.1:8000//file-1614541789713.jpg",
+      "userId": 1,
+      "updatedAt": "2021-02-28T19:49:49.718Z",
+      "id": 4
+    }
+  ]
+}

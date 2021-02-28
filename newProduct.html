@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoolName</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/nav-bar.css">
+    <link rel="stylesheet" href="/css/newProductForm.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/46be21cbdc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="lds-ring hidden">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="global-errors hidden">
+    </div>
+
+    <section class="nav-bar">
+        <div class="logo">
+            <a href="/">CoolLogo</a>
+        </div>
+        <div class="nav-options">
+        </div>
+    </section>
+
+    <section class="newProductForm">
+        <h1 class="title">New Product</h1>
+        <form action="">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" autocomplete="off" required>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="10" style="resize: vertical;" required></textarea>
+            </div>
+
+            <div class="tags">
+                <p>Tags</p>
+                <div>
+                    <div><label for="food">Food</label>
+                        <input type="checkbox" class="checkbox" name="tags" id="food" value="Food">
+                    </div>
+                    <div><label for="tech">Tech</label>
+                        <input type="checkbox" class="checkbox" name="tags" id="tech" value="Tech">
+                    </div>
+                    <div><label for="sports">Sports</label>
+                        <input type="checkbox" class="checkbox" name="tags" id="sports" value="Sports">
+                    </div>
+                    <div><label for="other">Other</label>
+                        <input type="checkbox" class="checkbox" name="tags" id="other" value="Other">
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <label for="sell">Selling</label>
+                <input type="radio" name="sellBuy" id="sell" value="Selling" class="radio" required>
+                <label for="buy">Buying</label>
+                <input type="radio" name="sellBuy" id="buy" value="Buying" class="radio">
+            </div>
+            <div>
+                <input type="file" name="file" accept="image/*">
+            </div>
+
+            <button disabled>Create new product</button>
+
+        </form>
+    </section>
+
+    <script src="./js/newProduct.js" type="module"></script>
+</body>
+
+</html>
