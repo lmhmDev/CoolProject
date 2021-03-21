@@ -18,7 +18,19 @@ export default {
 
         if (response.ok) {
             const data = await response.json();
-            return data;
+            console.log(data)
+            return data.map(product => {
+                const user = product.user || {};
+                return {
+                    id: product.id,
+                    name: product.name.replace(/(<([^>]+)>)/gi, ""),
+                    sellBuy: product.sellBuy,
+                    description: product.description.replace(/(<([^>]+)>)/gi, ""),
+                    tags: product.tags,
+                    image: product.image,
+                    userId: product.userId,
+                }
+            });
         } else {
             throw new Error(`HTTP Error: ${response.status}`);
         }
